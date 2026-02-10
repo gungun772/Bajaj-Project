@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bfhl-api
+    runtime: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # Set manually in Render dashboard
